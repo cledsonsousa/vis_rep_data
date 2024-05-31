@@ -32,4 +32,22 @@ M.~Krzywinski.
 \newblock Points of view: Elements of visual style.
 \newblock {\em Nature Methods}, 10(5):371--371, 2013.
 
+\bibitem{Wilke2019}
+Claus~O Wilke.
+\newblock {\em {Fundamentals of Data Visualization: A Primer on Making
+  Informative and Compelling Figures}}.
+\newblock 2019.
+
+\bibitem{brown2021statistics}
+David~S Brown.
+\newblock {\em Statistics and data visualization using R: the art and practice
+  of data analysis}.
+\newblock SAGE Publications, 2021.
+
+\bibitem{mayer2013big}
+Viktor Mayer-Sch{\"o}nberger and Kenneth Cukier.
+\newblock {\em Big data: A revolution that will transform how we live, work,
+  and think}.
+\newblock Houghton Mifflin Harcourt, 2013.
+
 \end{thebibliography}

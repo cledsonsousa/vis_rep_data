@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2024.4.14)  30 MAY 2024 16:53
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2024.4.14)  31 MAY 2024 12:00
  restricted system commands enabled.
 **vis_rep_data.tex
 (./vis_rep_data.tex
@@ -1352,7 +1352,7 @@ Package hyperref Info: Link coloring OFF on input line 96.
 \@outlinefile=\write6
 
 \openout6 = vis_rep_data.out
-<figs/uffdataacademy.png, id=18, 359.3425pt x 248.93pt>
+<figs/uffdataacademy.png, id=42, 359.3425pt x 248.93pt>
 File: figs/uffdataacademy.png Graphic file (type png)
 <use figs/uffdataacademy.png>
 Package luatex.def Info: figs/uffdataacademy.png  used on input line 133.
@@ -1378,22 +1378,19 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1]
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 [2]
-<figs/layers_box_plt_example.png, id=52, 472.01344pt x 471.26062pt>
+<figs/layers_box_plt_example.png, id=83, 472.01344pt x 471.26062pt>
 File: figs/layers_box_plt_example.png Graphic file (type png)
 <use figs/layers_box_plt_example.png>
 Package luatex.def Info: figs/layers_box_plt_example.png  used on input line 21
 8.
 (luatex.def)             Requested size: 170.5pt x 170.22896pt.
-
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
  [3<./figs/layers_box_plt_example.png>]
-<figs/error_bar_example.png, id=66, 89.73524pt x 87.32625pt>
+<figs/error_bar_example.png, id=97, 89.73524pt x 87.32625pt>
 File: figs/error_bar_example.png Graphic file (type png)
 <use figs/error_bar_example.png>
 Package luatex.def Info: figs/error_bar_example.png  used on input line 244.
 (luatex.def)             Requested size: 107.4138pt x 104.5298pt.
-<figs/error_line_example.png, id=67, 89.133pt x 85.5195pt>
+<figs/error_line_example.png, id=98, 89.133pt x 85.5195pt>
 File: figs/error_line_example.png Graphic file (type png)
 <use figs/error_line_example.png>
 Package luatex.def Info: figs/error_line_example.png  used on input line 251.
@@ -1402,19 +1399,130 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 262.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 262.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [4<./figs/error_bar_example.png><./figs/error_line_example.png>]
-<figs/IC_sobrep_visual.png, id=87, 472.01344pt x 471.26062pt>
+<figs/IC_sobrep_visual.png, id=119, 472.01344pt x 471.26062pt>
 File: figs/IC_sobrep_visual.png Graphic file (type png)
 <use figs/IC_sobrep_visual.png>
 Package luatex.def Info: figs/IC_sobrep_visual.png  used on input line 292.
 (luatex.def)             Requested size: 238.69896pt x 238.3191pt.
- [5] (./vis_rep_data.bbl (./vis_rep_data.brf)
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[5]
+<../../vis_rep_data/apostila/figs/band _and_violin1.png, id=137, 714.9912pt x 2
+91.489pt>
+File: ../../vis_rep_data/apostila/figs/band _and_violin1.png Graphic file (type
+ png)
+<use ../../vis_rep_data/apostila/figs/band _and_violin1.png>
+Package luatex.def Info: ../../vis_rep_data/apostila/figs/band _and_violin1.png
+  used on input line 301.
+(luatex.def)             Requested size: 341.0pt x 139.01912pt.
+
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[6<./figs/IC_sobrep_visual.png>]
+<../../vis_rep_data/apostila/figs/mr_brown.png, id=153, 770.88pt x 770.88pt>
+File: ../../vis_rep_data/apostila/figs/mr_brown.png Graphic file (type png)
+<use ../../vis_rep_data/apostila/figs/mr_brown.png>
+Package luatex.def Info: ../../vis_rep_data/apostila/figs/mr_brown.png  used on
+ input line 317.
+(luatex.def)             Requested size: 89.59961pt x 89.59622pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 318.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Marginpar on page 7 moved by 146.21213pt.
+
+
+LaTeX Warning: Marginpar on page 7 moved by 18.63959pt.
+
+[7<../../vis_rep_data/apostila/figs/band _and_violin1.png><../../vis_rep_data/ap
+ostila/figs/mr_brown.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[8]
+Overfull \hbox (5.51999pt too wide) in paragraph at lines 363--364
+\TU/lmr/m/n/10 https://-me-dium.com/number-around-us/hypothesis-testing-in-r-ele
+vating-your-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[9]
+<../../vis_rep_data/apostila/figs/hyp_test.png, id=186, 1541.76pt x 740.7675pt>
+
+File: ../../vis_rep_data/apostila/figs/hyp_test.png Graphic file (type png)
+<use ../../vis_rep_data/apostila/figs/hyp_test.png>
+Package luatex.def Info: ../../vis_rep_data/apostila/figs/hyp_test.png  used on
+ input line 381.
+(luatex.def)             Requested size: 341.0pt x 163.83969pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[10<../../vis_rep_data/apostila/figs/hyp_test.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.69003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.69003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
+
+[11] (./vis_rep_data.bbl (./vis_rep_data.brf)
 \tf@brf=\write7
 
 \openout7 = vis_rep_data.brf
 
 bibitemlist
-) [6<./figs/IC_sobrep_visual.png>]
+) [12]
 \tf@toc=\write8
 
 \openout8 = vis_rep_data.toc
@@ -1427,22 +1535,23 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `vis_rep_data.out' has not changed.
-(rerunfilecheck)             Checksum: 63382F2AECFB30522FDF0BB6F27163E4;421.
+(rerunfilecheck)             Checksum: EAAE1A46B0A96B23B0BFC4284FBEA5D5;1647.
 Package rerunfilecheck Info: File `vis_rep_data.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38498 strings out of 476497
+ 38611 strings out of 476497
  125027,1977958 words of node,token memory allocated
- 3729 words of node memory still in use:
-   19 hlist, 5 vlist, 1 rule, 25 disc, 1 local_par, 8 math, 57 glue, 15 kern, 6 
-penalty, 206 glyph, 47 attribute, 201 glue_spec, 25 attribute_list, 3 write, 1 p
-df_dest nodes
-   avail lists: 2:738,3:287,4:40,5:289,6:49,7:6153,8:40,9:319,10:13,11:752
- 59744 multiletter control sequences out of 65536+600000
- 48 fonts using 42620359 bytes
- 87i,11n,89p,728b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 9608 words of node memory still in use:
+   68 hlist, 13 vlist, 6 rule, 81 disc, 7 local_par, 14 math, 181 glue, 40 kern,
+ 33 penalty, 641 glyph, 177 attribute, 201 glue_spec, 90 attribute_list, 5 write
+, 2 pdf_literal, 3 pdf_start_link, 3 pdf_end_link, 4 pdf_dest, 3 pdf_action, 4 p
+df_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 2:615,3:271,4:44,5:363,6:46,7:6940,8:40,9:392,10:21,11:893
+ 59820 multiletter control sequences out of 65536+600000
+ 52 fonts using 52813191 bytes
+ 87i,12n,89p,1025b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <//?/c:/program files/miktex/fonts/opentype/public/lm/lmroman8-bold.otf><//?/c:/
 program files/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><//?/c:/progr
 am files/miktex/fonts/opentype/public/lm/lmroman6-regular.otf><//?/c:/program fi
@@ -1450,6 +1559,7 @@ les/miktex/fonts/opentype/public/lm/lmroman7-regular.otf><//?/c:/program files/m
 iktex/fonts/opentype/public/lm/lmroman9-regular.otf><//?/c:/program files/miktex
 /fonts/opentype/public/lm/lmroman10-italic.otf><//?/c:/program files/miktex/font
 s/opentype/public/lm/lmmono10-regular.otf><C:/windows/Fonts/seguiemj.ttf><//?/c:
+/program files/miktex/fonts/opentype/public/lm/lmromancaps10-regular.otf><//?/c:
 /program files/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/pro
 gram files/miktex/fonts/opentype/public/lm/lmroman10-bold.otf><//?/c:/program fi
 les/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><//?/c:/program files/
@@ -1457,10 +1567,11 @@ miktex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/c:/program files/miktex/
 fonts/opentype/public/lm/lmroman17-regular.otf><C:/Program Files/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-Output written on vis_rep_data.pdf (8 pages, 165423 bytes).
+0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on vis_rep_data.pdf (14 pages, 1967554 bytes).
 
-PDF statistics: 203 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 131072)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 307 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 131072)
+ 88 words of extra memory for PDF output out of 10000 (max. 100000000)
 

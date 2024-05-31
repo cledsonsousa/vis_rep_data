@@ -5,44 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: vis_rep_data.bib
-You've used 6 entries,
+Warning--empty publisher in Wilke2019
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            494 strings with 4479 characters,
-and the built_in function-call counts, 1493 in all, are:
-= -- 141
-> -- 58
+            510 strings with 4914 characters,
+and the built_in function-call counts, 1950 in all, are:
+= -- 177
+> -- 74
 < -- 0
-+ -- 22
-- -- 16
-* -- 127
-:= -- 242
-add.period$ -- 18
-call.type$ -- 6
++ -- 29
+- -- 20
+* -- 140
+:= -- 313
+add.period$ -- 27
+call.type$ -- 9
 change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 54
-empty$ -- 144
-format.name$ -- 16
-if$ -- 315
+cite$ -- 10
+duplicate$ -- 84
+empty$ -- 201
+format.name$ -- 20
+if$ -- 423
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 33
-num.names$ -- 6
-pop$ -- 6
+int.to.str$ -- 9
+missing$ -- 12
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 28
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 25
 stack$ -- 0
 substring$ -- 147
-swap$ -- 6
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 18
-width$ -- 7
-write$ -- 68
+warning$ -- 1
+while$ -- 21
+width$ -- 10
+write$ -- 97
+(There was 1 warning)
