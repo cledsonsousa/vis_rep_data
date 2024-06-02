@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{wainer1996depicting}
 Howard Wainer.
@@ -49,5 +49,10 @@ Viktor Mayer-Sch{\"o}nberger and Kenneth Cukier.
 \newblock {\em Big data: A revolution that will transform how we live, work,
   and think}.
 \newblock Houghton Mifflin Harcourt, 2013.
+
+\bibitem{numberaroundus}
+Number~Around Us.
+\newblock Hypothesis testing in r: Elevating your data analysis skills, 2024.
+\newblock Acesso: 31-05-2024.
 
 \end{thebibliography}

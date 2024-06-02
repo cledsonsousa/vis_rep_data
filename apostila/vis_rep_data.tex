@@ -342,17 +342,17 @@ São quatro os componentes da análise de dados  nessa ordem:
 
 	Existem múltiplos conceitos e técnicas (ou seja, construção e estimativa de modelos, transformação de variáveis, diagnósticos etc.). O propósito deste capítulo é introduzir as linhas gerais estratégias de uma boa análise de dados com um exemplo. 
 
-\paragraph*{Descrição de dados e formulação de hipóteses:}\mbox{}\\
+\paragraph*{Descrição de Dados e Formulação de Hipóteses:}\mbox{}\\
 
 Descrever dados significa, a princípio, identificar o caso típico (\textbf{tendência central}) e entender quão típico é esse caso típico (dispersão). No entanto com as novas ferramentas, deve-se ir muito além disso. Significa, entender, correlacionar e encontrar padões.
 E as hipóteses? Para nós uma hipótese se referirá a uma suposição específica sobre como duas coisas estão relacionadas (por exemplo, probabilidade de acesso ao meio e vazão total). 
 
-\paragraph*{Construção e estimativa de modelos:}\mbox{}\\
+\paragraph*{Construção e Estimativa de Modelos:}\mbox{}\\
 
 Modelos são versões simplificadas da realidade que nos ajudam a entender nosso mundo complexo. São argumentos  para explicar um problema empírico. Por exemplo, se queremos explicar por que alguns países têm altas taxas de homicídio, construímos um modelo que pode incluir renda, idade da população, número de policiais e eficácia do sistema judiciário. Há uma infinidade de outras possíveis causas que poderíamos incluir, mas é útil manter as coisas simples, mas em engenharia não queremos recriar a realidade; queremos apenas aproximá-la. 
 
 \paragraph*{Diagnósticos:}\mbox{}\\
-Depois de construirmos modelos e obtermos algumas estimativas, passamos para os diagnósticos. Diagnósticos são um conjunto de ferramentas que usamos para determinar se estamos usando o tipo certo de modelo. Para verificar se nosso modelo é apropriado, examinamos quão bem as previsões do nosso modelo correspondem à realidade. A diferença entre nossa previsão e a realidade é chamada de erro residual. Por exemplo, se nosso modelo faz um bom trabalho ao prever a vazão total (em bps)) em todas as redes, exceto nas redes sem fio em áreas urbanas densas, os diagnósticos resultantes dirão isso. Ou seja, os resíduos para esses casos serão relativamente grandes. Talvez nossas estimativas de modelo estejam sendo excessivamente influenciadas por essas redes sem fio urbanas. Diagnósticos nos ajudam a determinar se nossas estimativas fornecem uma boa noção de como a vazão de rede realmente funciona, são o produto de alguns casos atípicos ou são o resultado de um modelo mal escolhido.
+Depois de construirmos modelos e obtermos algumas estimativas, passamos para os diagnósticos. Diagnósticos são um conjunto de ferramentas que usamos para determinar se estamos usando o tipo certo de modelo. Para verificar se nosso modelo é apropriado, examinamos quão bem as previsões do nosso modelo correspondem à realidade. A diferença entre nossa previsão e a realidade é chamada de erro residual. Por exemplo, se nosso modelo faz um bom trabalho ao prever a vazão total (em bps) em todas as redes, exceto nas redes sem fio em áreas urbanas densas, os diagnósticos resultantes dirão isso. Ou seja, os resíduos para esses casos serão relativamente grandes. Talvez nossas estimativas de modelo estejam sendo excessivamente influenciadas por essas redes sem fio urbanas. Diagnósticos nos ajudam a determinar se nossas estimativas fornecem uma boa noção de como a vazão de rede realmente funciona, são o produto de alguns casos atípicos ou são o resultado de um modelo mal escolhido.
 
 É importante lembrar que diagnósticos podem tanto detectar problemas quanto ajudar a descobrir relações interessantes, gerando explicações adicionais ou hipóteses. 
 
@@ -366,29 +366,37 @@ Os testes de hipóteses constituem uma pedra angular, o teste de hipótese trata
 
 A hipótese nula, $H_0$, representa uma crença básica. É uma afirmação de nenhum efeito ou nenhuma diferença, como “Não há diferença nas alturas médias entre duas espécies de plantas”. Em contrapartida, a hipótese alternativa, H1, representa o que procuramos estabelecer. É uma afirmação de efeito ou diferença, como ``Há uma diferença significativa nas alturas médias entre estas duas espécies".
 
-Para decidir entre essas hipóteses, usamos um valor p, uma estatística crucial no teste de hipóteses. O valor p nos diz a probabilidade de observar nossos dados, ou algo mais extremo, se a hipótese nula fosse verdadeira. Um valor p (\textit{p-value}) baixo (geralmente abaixo de 0,05) sugere que os dados observados são improváveis sob a hipótese nula, levando-nos a considerar a hipótese alternativa.
+Para decidir entre essas hipóteses, usamos um valor $p$, uma estatística crucial no teste de hipóteses. O valor p nos diz a probabilidade de observar nossos dados, ou algo mais extremo, se a hipótese nula fosse verdadeira. Um valor p (\textit{p-value}) baixo (geralmente abaixo de 0,05) sugere que os dados observados são improváveis sob a hipótese nula, levando-nos a considerar a hipótese alternativa.
 
-No contexto do teste de correlação de Pearson, o valor p desempenha um papel fundamental na determinação da significância estatística da correlação observada entre duas variáveis. O teste de Pearson avalia a força e a direção da relação linear entre duas variáveis contínuas. Ao realizar este teste, calculamos o coeficiente de correlação de Pearson (r), que pode variar de -1 a 1. No entanto, para inferir se a correlação observada é estatisticamente significativa, analisamos o valor p associado.
+No contexto do teste de correlação de Pearson, o valor $p$ desempenha um papel fundamental na determinação da significância estatística da correlação observada entre duas variáveis. O teste de Pearson avalia a força e a direção da relação linear entre duas variáveis contínuas. Ao realizar este teste, calculamos o coeficiente de correlação de Pearson (r), que pode variar de -1 a 1. No entanto, para inferir se a correlação observada é estatisticamente significativa, analisamos o valor $p$ associado.
 
-Quando o valor p é baixo, indica que a probabilidade de obter um coeficiente de correlação tão extremo quanto o observado, se a hipótese nula de correlação zero fosse verdadeira, é pequena. Por exemplo, um valor p menor que 0,05 sugere que há menos de 5\% (0.05) de chance de a correlação observada ser devida ao acaso, fornecendo evidências contra a hipótese nula e a favor de uma correlação verdadeira entre as variáveis. Portanto, a interpretação do valor p no teste de Pearson nos ajuda a decidir se podemos rejeitar a hipótese nula e aceitar a hipótese alternativa de que existe uma correlação significativa.
+Quando o valor p é baixo, indica que a probabilidade de obter um coeficiente de correlação tão extremo quanto o observado, se a hipótese nula de correlação zero fosse verdadeira, é pequena. Por exemplo, um valor p menor que 0,05 sugere que há menos de 5\% (0.05) de chance de a correlação observada ser devida ao acaso, fornecendo evidências contra a hipótese nula e a favor de uma correlação verdadeira entre as variáveis. Portanto, a interpretação do valor $p$ no teste de Pearson nos ajuda a decidir se podemos rejeitar a hipótese nula e aceitar a hipótese alternativa de que existe uma correlação significativa.
 
 No entanto, o teste de hipóteses não está isento de riscos, nomeadamente erros do Tipo I e do Tipo II. Um erro Tipo I, ou falso positivo, ocorre quando rejeitamos incorretamente uma hipótese nula verdadeira. Por exemplo, concluir que um novo medicamento é eficaz quando não o é, seria um erro do Tipo I. Este tipo de erro pode levar a uma falsa confiança em tratamentos ou intervenções ineficazes.
 
-Por outro lado, um erro Tipo II, ou falso negativo, ocorre quando não conseguimos rejeitar uma hipótese falsa nula. Isto seria como não reconhecer a eficácia de um medicamento benéfico. Os erros do tipo II podem levar à perda de oportunidades de intervenções ou tratamentos benéficos.
+Por outro lado, um erro Tipo II, ou falso negativo, ocorre quando não conseguimos rejeitar uma hipótese nula falsa. Isto seria como não reconhecer a eficácia de um medicamento benéfico. Os erros do tipo II podem levar à perda de oportunidades de intervenções ou tratamentos benéficos.
+
+O valor crítico é o ponto de corte que determina a fronteira entre a região onde rejeitamos a hipótese nula ($H_0$) e a região onde não a rejeitamos, com base no nível de significância ($\alpha$) do teste. É calculado de modo que a probabilidade de cometer um erro do Tipo I (rejeitar $H_0$ quando $H_0$ é verdadeira) seja igual a $\alpha$. Por exemplo, em um teste unilateral com nível de significância de 5\% ($\alpha$ = 0.05), o valor crítico na distribuição normal padrão seria aproximadamente 1.645. Se a estatística de teste exceder este valor crítico, rejeitamos $H_0$, caso contrário, não a rejeitamos.
+
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\linewidth]{../../vis_rep_data/apostila/figs/hyp_test}
-	\caption{duas curvas de distribuição de probabilidades, uma para a hipótese nula (H0) e outra para a hipótese alternativa (H1). As áreas sombreadas em vermelho e azul ilustram os erros do Tipo 1 e do Tipo 2, respectivamente.}
+	\caption{duas curvas de distribuição de probabilidades, uma para a hipótese nula ($H_0$) e outra para a hipótese alternativa ($H_1$). As áreas sombreadas em vermelho e azul ilustram os erros do Tipo I e do Tipo II, respectivamente.}
 	\label{fig:hyptest}
 \end{figure}
 
 
 O equilíbrio entre esses erros é crucial. O nível de significância, muitas vezes fixado em 0,05, ajuda a controlar a taxa de erros do Tipo I. No entanto, a redução dos erros do Tipo I pode aumentar a probabilidade de erros do Tipo II. Assim, a análise estatística não consiste apenas na aplicação de uma fórmula; requer uma consideração cuidadosa do contexto, dos dados e das implicações potenciais de ambos os tipos de erros.
 
-A programação R, com seu conjunto abrangente de ferramentas estatísticas, simplifica a aplicação de testes de hipóteses. Ele não apenas realiza os cálculos necessários, mas também auxilia na visualização dos dados, o que pode fornecer insights adicionais. Através do R, podemos executar com eficiência vários testes de hipóteses, desde testes t simples até análises mais complexas, tornando-o uma ferramenta inestimável tanto para estatísticos quanto para analistas de dados.
+A programação R, com seu conjunto abrangente de ferramentas estatísticas, simplifica a aplicação de testes de hipóteses. Ele não apenas realiza os cálculos necessários, mas também auxilia na visualização dos dados, o que pode fornecer \textit{insights} adicionais. Através do R, podemos executar com eficiência vários testes de hipóteses, desde testes t simples até análises mais complexas, tornando-o uma ferramenta inestimável tanto para estatísticos quanto para analistas de dados.
 
-Em resumo, o teste de hipóteses é um método poderoso para tomar decisões baseadas em dados. Requer uma compreensão de conceitos estatísticos como hipóteses nulas e alternativas, valores p e os tipos de erros que podem ocorrer. Com R, podemos aplicar esses conceitos com mais facilidade, permitindo-nos tirar conclusões significativas a partir de nossos dados.
+Em resumo, o teste de hipóteses é um método, que se observado com rigor e correção, suporta a decisão dentro de fatores repetíveis. Requer uma compreensão de conceitos estatísticos como hipóteses nulas e alternativas, valores $p$ e os tipos de erros que podem ocorrer. 
+
+\subsection{Teste de Hipóteses -- Um Exemplo Prático}
+
+Nesta seção, demonstraremos como conduzir um teste de hipóteses\footnote{O teste  apresentado nesta Seção foi extraído de \cite{numberaroundus}.} no R usando um conjunto de dados do mundo real. Exploraremos o conjunto de dados 'PlantGrowth', incluído no R, que contém dados sobre o peso das plantas sob diferentes condições de crescimento. Nosso objetivo será determinar se há uma diferença estatisticamente significativa no crescimento das plantas entre dois grupos de tratamento.
+
 
 
 
