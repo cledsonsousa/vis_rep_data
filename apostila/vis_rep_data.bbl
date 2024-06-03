@@ -55,4 +55,16 @@ Number~Around Us.
 \newblock Hypothesis testing in r: Elevating your data analysis skills, 2024.
 \newblock Acesso: 31-05-2024.
 
+\bibitem{Lilja2016}
+David~J. Lilja and Greta~M. Linse.
+\newblock {\em Linear Regression Using R: An Introduction to Data Modeling, 2nd
+  Edition}.
+\newblock 2022.
+\newblock Retrieved from the University Digital Conservancy.
+
+\bibitem{gray2000benchmark}
+Jim Gray.
+\newblock Chapter 9: Performance measurement and benchmarking, 2000.
+\newblock Accessed: 2024-06-02.
+
 \end{thebibliography}

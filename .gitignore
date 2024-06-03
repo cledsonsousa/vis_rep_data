@@ -1,0 +1,11 @@
+# ignore ALL .log files
+*.log
+*.pdf
+*.zip
+*.pptx
+
+# ignore ALL files in ANY directory named temp
+temp/
+data/
+refs/
+apostila/

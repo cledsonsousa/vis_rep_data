@@ -92,7 +92,7 @@
 \makeindex % Inicializa o sistema de índice remissivo
 
 
-
+\newcommand{\rlogo}{\protect\includegraphics[height=1.8ex,keepaspectratio]{figs/r_logo.png}}
 \begin{document}
 	
 % Estilo de listagem no estilo GitHub
@@ -139,7 +139,7 @@
 		
 		\vfill
 		\Large Professor Cledson de Sousa\\[0.5cm] % Seu nome
-		Versão: 0.1.\therun -- 13 de maio/2024 -- Até MPLS.
+		Versão: 0.2.\therun -- 13 de maio/2024 -- Até MPLS.
 		%Data do Curso: \today % Ou coloque a data específica
 		
 
@@ -314,7 +314,7 @@ Experimentos na nossa área (Engenharia) tipicamente nos inundam com dados muita
 
 \begin{marginfigure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{../../vis_rep_data/apostila/figs/mr_brown}
+	\includegraphics[width=0.7\linewidth]{figs/mr_brown}
 	\caption{Mr. Brown  Tem mais de 20 anos de experiência como avaliador estatístico na MHRA e, antes do Brexit, foi membro do grupo de trabalho de bioestatística e do grupo de trabalho de aconselhamento científico da EMA. Ele fez parte do grupo que formulou a orientação recentemente publicada da MHRA sobre dados do mundo real.}
 	\label{fig:mrbrown}
 \end{marginfigure}
@@ -360,7 +360,7 @@ Depois de construirmos modelos e obtermos algumas estimativas, passamos para os 
  se as estimativas que obtivemos estão corretas, então esperaríamos ver nossa variável acompanhar certo comportamento. Seguir cada conjunto de estimativas com essa declaração ajuda a descobrir explicações possíveis e hipóteses adicionais a serem testadas. Como é impossível provar qualquer coisa com total certeza, o exercício de gerar hipóteses adicionais para testar é extremamente importante. 
 
 \section{Descrevendo e Formulando Hipóteses}
-https://medium.com/number-around-us/hypothesis-testing-in-r-elevating-your-data-analysis-skills-e7256ed64178
+%https://medium.com/number-around-us/hypothesis-testing-in-r-elevating-your-data-analysis-skills-e7256ed64178
 
 Os testes de hipóteses constituem uma pedra angular, o teste de hipótese trata de determinar a probabilidade de que uma determinada premissa sobre um conjunto de dados seja verdadeira. É um método usado para validar ou refutar suposições, muitas vezes levando a novos \textit{insights} e entendimentos. Na sua essência, envolve a formulação de duas hipóteses concorrentes: a hipótese nula ($H_0$) e a hipótese alternativa ($H_1$).
 
@@ -393,26 +393,348 @@ A programação R, com seu conjunto abrangente de ferramentas estatísticas, sim
 
 Em resumo, o teste de hipóteses é um método, que se observado com rigor e correção, suporta a decisão dentro de fatores repetíveis. Requer uma compreensão de conceitos estatísticos como hipóteses nulas e alternativas, valores $p$ e os tipos de erros que podem ocorrer. 
 
-\subsection{Teste de Hipóteses -- Um Exemplo Prático}
+\subsection{Teste de Hipótese -- Um Exemplo Prático}
+\label{hypo}
+Nesta seção, demonstraremos como conduzir um teste de hipóteses\footnote{O teste  apresentado na Seção \ref{hypo} foi extraído de \cite{numberaroundus}.} no \rlogo~ usando um conjunto de dados do mundo real. Exploraremos o conjunto de dados \texttt{PlantGrowth},\footnote{O  \rlogo~possui pacotes \textit{libraries} e \textit{datasets} para auxiliar a comunidade a aprender e ensinar. o \texttt{PlantGrowth} é um dentre tantos.} incluído no \rlogo, que contém dados sobre o peso das plantas sob diferentes condições de crescimento. Nosso objetivo será determinar se há uma diferença estatisticamente significativa no crescimento das plantas entre dois grupos de tratamento.
 
-Nesta seção, demonstraremos como conduzir um teste de hipóteses\footnote{O teste  apresentado nesta Seção foi extraído de \cite{numberaroundus}.} no R usando um conjunto de dados do mundo real. Exploraremos o conjunto de dados 'PlantGrowth', incluído no R, que contém dados sobre o peso das plantas sob diferentes condições de crescimento. Nosso objetivo será determinar se há uma diferença estatisticamente significativa no crescimento das plantas entre dois grupos de tratamento.
+\paragraph*{Formulação da Hipótese:}\mbox{}\\
+
+A hipótese nula ($H_0$) é a manutenção do \textit{status quo}, ou seja,  afirma que não há diferença no crescimento médio das plantas entre os dois grupos. A hipótese alternativa ($H_1$) postula que existe uma diferença significativa.
+
+\paragraph*{Conduzindo o Teste de Hipótese:}\mbox{}\\
+Precisamos descobrir o números de grupos do \textit{dataset} e em seguida aplicar de um teste t para comparar os pesos médios das plantas entre dois dos grupos que se quer comparar. Este teste é apropriado para comparar as médias de dois grupos independentes.
+
+Passo 1: instalar os pacotes apropriados ver Listagem \ref{lst:ins_easystats}.
+
+\begin{lstlisting}[language={R}, caption={comando para instalar e carregar a bibliotrca easystat.}, label={lst:ins_easystats}]
+	>install.packages("easystats")
+	>library(easystats)
+\end{lstlisting}
+
+%Passo 2: verificar os diferentes  grupos do \textit{dataframe} ver Listagem \ref{lst:sel_distinct}. 
+%
+%\begin{lstlisting}[language={R}, caption={comando para exibição de linhas não duplicadas em um dataframe no \rlogo.}, label={lst:sel_distinct}]
+%	>sqldf('select distinct [group] from PlantGrowth')
+%	  group
+%	1  ctrl
+%	2  trt1
+%	3  trt2
+%\end{lstlisting}
+
+Passo 2: exibição da estrutura e sumário dos dados, ver Listagem \ref{lst:est_e_summary}.
+
+\begin{lstlisting}[language={R}, caption={comando para exibição  da estrutura e sumário do \textit{dataframe} no \rlogo.}, label={lst:est_e_summary}]
+> head (PlantGrowth)
+weight group
+1   4.17  ctrl
+2   5.58  ctrl
+3   5.18  ctrl
+4   6.11  ctrl
+5   4.50  ctrl
+6   4.61  ctrl
+> summary (PlantGrowth)
+weight       group   
+Min.   :3.590   ctrl:10  
+1st Qu.:4.550   trt1:10  
+Median :5.155   trt2:10  
+Mean   :5.073            
+3rd Qu.:5.530            
+Max.   :6.310            
+\end{lstlisting}
+
+Passo 4: formulando as hipóteses e conduzindo o teste da hipótese.
+
+Nossa hipótese nula ($H_0$) afirma que não há diferença no crescimento médio das plantas entre os dois grupos (\textit{status quo}). A hipótese alternativa ($H_1$) postula que existe uma diferença significativa. E aplicação do teste \footnote{O teste \textit{t} é empregado para comparar as médias de dois grupos e determinar se elas são significativamente diferentes uma da outra. O teste \textit{t} é baseado na distribuição t de Student e é especialmente útil quando as amostras são pequenas e a variância é desconhecida. E Amostras independentes são aquelas em que as observações de uma amostra não têm qualquer relação com as observações da outra amostra.} \textit{t}, para comparar os pesos médios das plantas entre dois dos grupos. Este teste é apropriado para comparar as médias de dois grupos independentes.
+
+\begin{lstlisting}[language={R}, caption={aplicação do test \textit{t} para comparação do subgrupo (ctrl e trt1) no \rlogo.}, label={lst:test_t}]
+> result <- t.test(weight ~ group, 
+> data = PlantGrowth, 
+> subset = group %in% c("ctrl", "trt1"))
+\end{lstlisting}
+
+Na Listagem \ref{lst:test_t}, \texttt{weight} é a variável de interesse (dependente) e \texttt{group} é a variável que define os grupos (a variável independente). E a comparação deve se dar entre o grupo de controle e um segundo que queremos avaliar.
+
+Passo 5: avaliação dos resultados, ver Listagem \ref{lst:result}. 
+
+\begin{lstlisting}[language={R}, caption={apresentação dos resultados.}, label={lst:result}]
+> report(result)
+Effect sizes were labelled following Cohen (1988) recommendations.
+
+The Welch Two Sample t-test testing the difference of weight by group 
+(mean in group ctrl = 5.03, mean in group trt1 = 4.66) suggests that 
+the effect is positive, statistically not significant, and 
+medium (difference = 0.37, 95% CI [-0.29, 1.03], t(16.52) = 1.19, 
+p = 0.250; Cohen d = 0.59, 95% CI [-0.41,1.56])
+\end{lstlisting}
+
+A função \texttt{result} gera um relatório teste t, incluindo a estimativa, o intervalo de confiança e o valor \textit{p}.
+
+Interpretando e visualizando os Resultados
+A saída da função de relatório nos dirá se a diferença nas médias é estatisticamente significativa. Um valor \textit{p} menor que 0,05 geralmente indica que a diferença é significativa, e podemos rejeitar a hipótese nula em favor da alternativa. No entanto, se o valor p for maior que 0,05, não temos evidências suficientes para rejeitar a hipótese nula.
+
+De modo que, olhando para nossos resultados, podemos avaliar que há uma certa diferença na medida que estamos verificando, mas de acordo com o valor de \textit{p} alto, nos habilita a dizer que essa diferença pode ser simplesmente uma questão de acaso, não sendo estatisticamente significativa \footnote{\textbf{Significância Estatística:} se o valor \textit{p} é menor que o nível de significância escolhido (por exemplo, 0,05), rejeitamos a hipótese nula em favor da hipótese alternativa, indicando que a diferença observada é estatisticamente significativa.\\
+	
+	\textbf{Não Significância Estatística:} se o valor \textit{p} é maior que o nível de significância, não rejeitamos a hipótese nula, indicando que não há evidências suficientes para afirmar que a diferença observada é estatisticamente significativa.}. Acompanhar a tradução gráfica do resultado\footnote{\textbf{Explore Antes de Testar:} Familiarize-se com seu conjunto de dados antes de realizar testes de hipótese. \\
+	\textbf{Verifique as Assunções:} Cada teste estatístico tem suposições (como normalidade, independência ou variância igual). \\ 
+	\textbf{Escolha o Teste Correto:} diferentes testes são projetados para diferentes tipos de dados e objetivos. Por exemplo, use um teste t para comparar médias, testes qui-quadrado para dados categóricos e ANOVA para comparar mais de dois grupos.\\
+	\textbf{Considere Opções Não Paramétricas:} Se seus dados não atenderem às suposições dos testes paramétricos (são normais?).} na Figura \ref{fig:boxplottesthyp}.
+
+\begin{lstlisting}[language={R}, caption={apresentação dos resultados.}, label={lst:result}]
+>library(ggplot2)
+>ggplot(PlantGrowth, aes(x = group, y = weight)) +
+geom_boxplot() +
+theme_minimal() +
+labs(title = "Plant Growth by Treatment Group",
+x = "Group",
+y = "Weight")
+\end{lstlisting}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../vis_rep_data/apostila/figs/box_plot_test_hyp}
+	\caption{o \textit{boxplot} exibe a média, a mediana, os quartis e possíveis \textit{outliers}.}
+	\label{fig:boxplottesthyp}
+\end{figure}
+
+É possível concluir que  os grupos ctrl e trt1 realmente não têm grande diferença, seus intervalos superam um ao outro \footnote{Que tal como exercício tentar verificar o par ctrl e trt2?}. 
+
+
+\section{Construção e Estimativa de Modelos}
+
+Um objetivo comum para o desenvolvimento de um modeloé prever qual será o valor de saída de um sistema para conjunto de valores de entrada. A ideia é discutir como desenvolver o modelo, como avaliar
+até que ponto o modelo criado se ajusta aos dados e como interpretar os resultados. 
+
+Suponha que medimos o desempenho de vários dispositivos computacionais. Podemos organizar  as $n \times k$ medições, mostradas na Tabela  \ref{tab:benchmark} Como medimos o desempenho de n dispositivos diferentes, obteremos $n$ linhas na tabela. Cada linha é chamada de ``observação" única.
+
+{\begin{table}[h]
+		\footnotesize
+			\centering
+			\caption{Um exemplo em que queremos prever o desempenho de novos	sistemas $n + 1, n + 2$ e $n + 3$ usando o medido anteriormente resultados dos outros n sistemas \cite{Lilja2016}.}
+			\label{tab:benchmark}
+			\begin{tabular}{@{}ccccc@{}}
+				\toprule
+				\textbf{System} & \textbf{Clock (MHz)} & \textbf{Cache (kB)} & \textbf{Transistors (M)} & \textbf{Output Performance} \\ 
+				\midrule
+				1               & 1500                 & 64                  & 2                       & 98                          \\
+				2               & 2000                 & 128                 & 2.5                     & 134                         \\
+				$\vdots$        & $\vdots$             & $\vdots$            & $\vdots$                & $\vdots$                    \\
+				i               & ...                  & ...                 & ...                     & ...                         \\
+				$\vdots$        & $\vdots$             & $\vdots$            & $\vdots$                & $\vdots$                    \\
+				n               & 1750                 & 32                  & 4.5                     & 113                         \\
+				$n+1$           & 2500                 & 256                 & 2.8                     & ?                           \\
+				$n+2$           & 1560                 & 128                 & 1.8                     & ?                           \\
+				$n+3$           & 900                  & 64                  & 1.5                     & ?                           \\ 
+				\bottomrule
+			\end{tabular}
+	\end{table}
+
+O objetivo da modelagem  é usar essas $k$ medidas independentes  para determinar uma função  $f$, que descreva 
+as relações entre os parâmetros de entrada e a saída, por exemplo $desempenho = f (clock, cache, transistors)$.
+Um dito modelo de regressão pode assumir qualquer forma. Nos restringiremos a uma função que é uma combinação linear (regressão linear) dos parâmetros de entrada. Mas note que,  embora a função seja linear, os parâmetros em si não precisam ser lineares. 
+
+\section{A Regressão Linear - SLR}
+
+A regressão linear é um método estatístico utilizado para modelar a relação entre uma variável dependente (\textbf{resposta}) e uma ou mais variáveis independentes (\textbf{preditores}). A equação da regressão linear múltipla pode ser expressa da seguinte forma\footnote{Em notação matemática,  letras maiúsculas denotam variáveis aleatórias ou conjuntos de dados:\\
+	-- $Y$ representa a variável resposta como um conjunto de observações.\\
+	-- $X_1, X_2, \ldots, X_p$ representam as variáveis preditoras como conjuntos de observações.\\
+	Na prática, o intercepto ($\beta_0$) representa o ponto onde a linha de regressão cruza o eixo y no gráfico de dispersão.}:
+
+\begin{equation}
+	Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \epsilon
+\end{equation}
+
+\noindent onde:
+\begin{itemize}
+	\item $Y$ é a variável resposta (dependente).
+	\item $X_1, X_2, \ldots, X_p$ são as variáveis preditoras (independentes).
+	\item $\beta_0$ é o intercepto.
+	\item $\beta_1, \beta_2, \ldots, \beta_p$ são os coeficientes de regressão associados às variáveis preditoras.
+	\item $\epsilon$ é o termo de erro, que captura a variação não explicada pelo modelo.
+\end{itemize}
+
+Os coeficientes de regressão ($\beta_i$) são estimados de forma a minimizar a soma dos quadrados dos resíduos (diferença entre os valores observados e os valores preditos pelo modelo).
+
+\begin{equation}
+	\min_{\beta_0, \beta_1, \ldots, \beta_p} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
+\end{equation}
+
+\noindent onde $\hat{Y}_i$ é o valor predito pelo modelo para a $i$-ésima observação.
+
+
+O primeiro passo no processo de modelagem com um único preditor é determinar se parece haver uma relação  entre o preditor e o valor de saída. Com base no conhecimento sobre projeto de dispositivos computacionais, sabemos que a frequência do \textit{clock} influencia fortemente o desempenho do sistema.De forma que é esperada uma correlação entre o desempenho do processador\footnote{O \textit{Integer Component of} SPEC CPU2000 (Componente Inteiro do SPEC CPU2000), cujo gráfico está apresentado na Figura \ref{fig:slrint2000} é uma parte do conjunto de \textit{benchmarks} desenvolvido pela \textit{Standard Performance Evaluation Corporation} (SPEC) para avaliar o desempenho de CPUs em tarefas que envolvem cálculos inteiros. O SPEC CPU2000 é um conjunto de testes que mede o desempenho de sistemas de computação, e é dividido em dois componentes principais: o \textit{integer} (inteiro) e o floating-point (ponto flutuante).} e sua frequência de \textit{clock}. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/int_2000}
+	\caption{Um gráfico de dispersão do desempenho dos processadores que testamos
+		usando o \textit{benchmark} Int2000 versus a frequência do \textit{clock}.}
+	\label{fig:slrint2000}
+\end{figure}
+
+\footnote{O \textit{Integer Component of} SPEC CPU2000 (Componente Inteiro do SPEC CPU2000) é uma parte do conjunto de \textit{benchmarks} desenvolvido pela \textit{Standard Performance Evaluation Corporation} (SPEC) para avaliar o desempenho (Dhrystones por segundo\cite{gray2000benchmark})de CPUs em tarefas que envolvem cálculos inteiros. O SPEC CPU2000 é um conjunto de testes que mede o desempenho de sistemas de computação, e é dividido em dois componentes principais: o \textit{integer} (inteiro) e o \textit{floating-point} (ponto flutuante).}
+
+A varável independente neste caso é o \textit{clock} e a variável dependente é o desempenho. Se sobrepusermos uma linha reta a este gráfico de dispersão, vemos que há uma aparente relação entre o preditor (a frequência do \textit{clock}) e a saída (o desempenho). O gráfico ainda mostra que esta relação não é perfeitamente linear. À medida que a frequência do \textit{clock} aumenta, vemos uma maior espalhamento em valores de desempenho. Nosso próximo passo é desenvolver uma regressão modelo que nos ajudará a quantificar o grau de linearidade na relação entre a saída e o preditor.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../vis_rep_data/apostila/figs/slr_int_2000}
+	\caption{o modelo de regressão linear simples sobreposto aos dados 		da Figura 	\ref{fig:slrint2000}.}
+	\label{fig:slrint2000}
+\end{figure}
+
+
+As informações que obtemos digitando o comando \texttt{int00.lm } alguns valores básicos do modelo, mas não nos diz nada sobre as qualidades do modelo. 
+
+\begin{lstlisting}[language={R}, caption={apresentação dos resultados do comando \texttt{summary(int00.lm)}.}, label={lst:result_summary_slr}]
+> summary(int00.lm)
+
+Call:
+lm(formula = perf ~ clock, data = int00.dat)
+
+Residuals:
+Min      1Q  Median      3Q     Max 
+-634.61 -276.17  -30.83   75.38 1299.52 
+
+Coefficients:
+Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 51.78709   53.31513   0.971    0.332    
+clock        0.58635    0.02697  21.741   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 396.1 on 254 degrees of freedom
+Multiple R-squared:  0.6505,    Adjusted R-squared:  0.6491 
+F-statistic: 472.7 on 1 and 254 DF,  p-value: < 2.2e-16
+
+\end{lstlisting}
+
+\subsection{Análise dos Resultados da Regressão Linear}
+
+Primeiramente vamos dissecar os valores dos resíduos.
+
+\paragraph*{Resíduos:}\mbox{}\\
+\begin{itemize}
+	\item \textbf{Min:} -634.61
+	\item \textbf{1Q:} -276.17
+	\item \textbf{Mediana:} -30.83
+	\item \textbf{3Q:} 75.38
+	\item \textbf{Max:} 1299.52
+\end{itemize}
+
+Esses valores indicam a distribuição dos resíduos. A mediana (-30.83) próxima de de zero (em comparação ao valor máximo 1299.52)   sugere que os resíduos estão aproximadamente balanceados em torno de zero, o que é um bom sinal. No entanto, a diferença entre os valores mínimo e máximo é bastante grande, indicando a presença de \textit{outliers}.
+
+\paragraph*{Coeficientes:}\mbox{}\\
+\begin{itemize}
+	\item \textbf{\textit{Residual standard error}:} 396.1 on 254 \textit{degrees of freedom}
+	\item \textbf{\textit{Multiple R-squared}:}	0.6505,
+	\item \textbf{\textit{Adjusted R-squared}:} 0.6491
+	\item \textbf{\textit{F-statistic}:} 472.7 on 1 and 254 DF,
+	\item \textbf{\textit{p-value}} < 2.2e-16
+	\item \textbf{R-quadrado múltiplo:} 0.6505
+	\item \textbf{R-quadrado ajustado:} 0.6491
+	\item \textbf{\textit{F-value}:} 472.7 on 1 and 254 DF, p-valor: < 2.2e-16
+\end{itemize}
 
 
 
+O valor de R-quadrado indica que aproximadamente 65.05\% da variação na performance pode ser explicada pela variação no \textit{clock}. Isso sugere um bom ajuste do modelo, mas ainda há 34.95\% da variação que não é explicada pelo modelo linear.
 
 
+	
+	No contexto de um modelo de regressão linear, o F-valor é uma medida estatística que testa a significância global do modelo. Ele é usado para avaliar se existe uma relação linear entre a variável dependente e as variáveis independentes no modelo.
+	
+	Os graus de liberdade (DF, do inglês \textit{Degrees of Freedom}) são importantes para o cálculo do \textit{F-value}. No caso "1 and 254 DF", o primeiro número (1) representa os graus de liberdade do numerador, que correspondem ao número de variáveis independentes no modelo (neste caso, apenas uma variável independente: clock). O segundo número (254) representa os graus de liberdade do denominador, que são baseados no número de observações menos o número de parâmetros estimados (neste caso, 256 observações menos 2 parâmetros: o intercepto e a inclinação).
+	
+
+	
+	Um \textit{F-value} alto e um \textit{p-value}\footnote{Não confunda \textit{p-value} com \textit{p-value}...\\ O p-value do teste de correlação de Pearson refere-se à significância da relação linear entre duas variáveis contínuas, enquanto o p-valor em regressão linear refere-se à significância de um coeficiente específico no modelo de regressão.}. muito baixo indicam que o modelo de regressão linear é estatisticamente significativo e que a variável independente (\textit{clock}) está fortemente associada à variável dependente (desempenho). 
+	
+Em resumo:
+
+\begin{itemize}
+	\item O modelo de regressão linear sugere uma forte relação entre a frequência de \textit{clock} e a performance do processador.
+	\item O coeficiente do \textit{clock} é altamente significativo, indicando que aumentos na frequência de clock estão fortemente associados a aumentos na performance.
+	\item A mediana dos resíduos próxima de zero sugere um bom ajuste, embora a presença de outliers (valores mínimos e máximos distantes) possa indicar a necessidade de verificar a presença de pontos atípicos ou considerar modelos mais complexos.
+	\item O R-quadrado de 65.05\% indica que o modelo explica uma parte significativa da variação na performance, mas há espaço para melhorias.
+\end{itemize}
+
+
+\subsection{Análise dos Resíduos}
+
+A função \texttt{summary()} fornece uma quantidade substancial de informações para nos ajudar a avaliar o ajuste de um modelo de regressão aos dados utilizados para desenvolvê-lo. Para aprofundar a análise da qualidade do modelo, precisamos examinar informações adicionais sobre os valores observados em comparação com os valores previstos pelo modelo. Em particular, a análise de resíduos examina esses valores residuais para entender melhor a qualidade do modelo.
+
+Lembre-se de que o valor residual é a diferença entre o valor medido real e o valor que a linha de regressão ajustada prevê para aquele ponto de dados correspondente. Valores residuais maiores que zero significam que o modelo de regressão previu um valor muito pequeno em comparação com o valor medido real, e valores negativos indicam que o modelo previu um valor muito grande. Um modelo que se ajusta bem aos dados tenderia a superestimar e subestimar os valores com a mesma frequência. Assim, ao que parece a primeira vista, dado a conformação geométrica dos pontos em torno da reta ajustada, se plotarmos os valores residuais, esperaríamos vê-los distribuídos normalmente em torno de zero para um modelo bem ajustado.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/slr_resid_int_200}
+	\caption{Os valores residuais versus os valores de saída do modelo  SLR desenvolvido usando os dados do Int2000.}
+	\label{fig:slrresidint200}
+\end{figure}
+
+Neste gráfico da Figura \ref{fig:slrresidint200}, vemos que os resíduos tendem a aumentar conforme nos movemos para a direita. Além disso, os resíduos não estão uniformemente dispersos acima e abaixo de zero. No geral, esse gráfico nos diz que usar o \textit{clock} como único preditor no modelo de regressão não explica suficientemente ou totalmente os dados. Em geral, se você observar qualquer tipo de tendência ou padrão claro nos resíduos, provavelmente precisará gerar um modelo melhor. Isso não significa que nosso modelo de regressão linear simples seja inútil. Significa apenas que podemos construir um modelo que produza valores residuais mais ajustados e melhores previsões.
+
+Outro teste dos resíduos utiliza o gráfico quantil-quantil\footnote{O gráfico Q-Q (Quantil-Quantil) é uma ferramenta diagnóstica usada para comparar a distribuição dos resíduos de um modelo de regressão com uma distribuição teórica, normalmente a distribuição normal}, ou Q-Q plot. Anteriormente, dissemos que, se o modelo se ajustasse bem aos dados, esperaríamos que os resíduos fossem distribuídos normalmente (Gaussianamente) em torno de uma média de zero. O Q-Q plot fornece uma boa indicação visual de se os resíduos do modelo são distribuídos normalmente. As chamadas de função a seguir geram o Q-Q plot mostrado na Figura 
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\linewidth]{../../vis_rep_data/apostila/figs/slr_qq_plot_int_2000}
+	\caption{ gráfico Q-Q  para o modelo de regressão linear com os dados do Int2000.}
+	\label{fig:slrqqplotint201}
+\end{figure}
+
+Se os resíduos fossem normalmente distribuídos, esperaríamos que os pontos plotados nesta figura seguissem uma linha reta. No entanto, com nosso modelo, vemos que as extremidades divergem consideravelmente dessa linha. Esse comportamento indica que os resíduos não são normalmente distribuídos. A forma como as caudas se desviam da linha de referência pode indicar como os resíduos observados se desviam do esperado caso fossem normalmente distribuídos.
+
+Na verdade, este gráfico sugere que a cauda direita da distribuição é ``mais pesada" do que o esperado de uma distribuição normal e que a cauda esquerda é ``mais leve" do que o esperado. Esse padrão é indicativo de uma distribuição enviesada à direita. Este teste confirma ainda mais que usar apenas o \textit{clock} como preditor no modelo é insuficiente para explicar os dados.
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\linewidth]{../../vis_rep_data/apostila/figs/slr_4_graphs_int_2000}
+	\caption{gráficos de análise mais profunda dos  resíduos e sua possível normalidade.}
+	\label{fig:slr4graphsint2000}
+\end{figure}
+
+Dos 4 gráficos apresentados na Figura 	\ref{fig:slr4graphsint2000} os dois primeiros já foram explicados anteriormente.  Os outros serão explicados a seguir.
+
+O gráfico ``\textit{Scale-location}" é uma maneira alternativa de visualizar os resíduos em relação aos valores ajustados do modelo de regressão linear. Nesse gráfico, os resíduos são padronizados e depois transformados pela raiz quadrada. Isso essencialmente dobra os resíduos e pode ajudar a encontrar padrões nos resíduos. 
+
+O gráfico de Resíduos vs Alavancagem pode ser usado para identificar possíveis \textit{outliers}. Neste cenário, não há \textit{outliers}.  
+
+Já o gráfico apresentado na Figura \ref{fig:slrresidprecisoint200} serve de comparação com a situação estudada até aqui, já que ele mostra um cenário onde o modelo se ajusta bem ao comportamento da variável dependente.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200}
+	\caption{Um modelo de regressão linear básico ajustado para uma precisão próxima de 90\%, para comparação com a Figura \ref{fig:slrresidint200}.}
+	\label{fig:slrresidprecisoint200}
+\end{figure}
+
+\section{Multiple Linear Regression \cite{Lilja2016}}
+\newpage
 Chapter 2 • An Introduction to Data Analysis
+
 Chapter 3 • Describing Data
+
 Chapter 4 • Central Tendency and Dispersion
+
 Chapter 5 • Univariate and Bivariate Descriptions of Data
+
 Chapter 6 • Transforming Data
+
 Chapter 7 • Some Principles of Displaying Data
+
 Chapter 8 • The Essentials of Probability Theory
+
 Chapter 9 • Confidence Intervals and Testing Hypotheses
+
 Chapter 10 • Making Comparisons
+
 Chapter 11 • Controlled Comparisons
 
-\newpage, 
+\newpage 
 %\pagebreak
 \thispagestyle{plain}
 \printpagenotes
