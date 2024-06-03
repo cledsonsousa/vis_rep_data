@@ -1,1 +1,1 @@
-Códisgos da disciplina de Análise, visualização e representação de dados dp  PPGEET da UFF.
+Códisgos da disciplina de Análise, visualização e representação de dados do  PPGEET da UFF. Em progresso.
