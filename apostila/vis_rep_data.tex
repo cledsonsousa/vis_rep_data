@@ -309,7 +309,7 @@ a Figura \ref{fig:band-andviolin1}a) mostra um Gráfico de Dispersão com Banda 
 Esses gráficos são úteis para entender não apenas os valores médios, mas também a variabilidade, a distribuição e a incerteza dos dados, proporcionando uma compreensão mais completa e detalhada das características dos dados analisados.
 \chapter{Introdução a Análise de Dados}
 
-Experimentos na nossa área (Engenharia) tipicamente nos inundam com dados muitas vezes difíceis de entender e quiçá explicar. O objetivo aqui é escrutinar o método, a lógica, a arte e a prática da análise e representação de dados, fornecendo as habilidades e ferramentas essenciais para examinar dados e resolver problemas. Concordamos com a filosofia de "aprender fazendo" para uma melhor compreensão da análise de dados\footnote{Este capítulo foi fortemente baseado em \cite{brown2021statistics} de David Brown \emoji{backhand-index-pointing-down} (ver Figura \ref{fig:mrbrown}).}.
+Experimentos na nossa área (Engenharia) tipicamente nos inundam com dados muitas vezes difíceis de entender e quiçá explicar. O objetivo aqui é escrutinar o método, a lógica, a arte e a prática da análise e representação de dados, fornecendo as habilidades e ferramentas essenciais para examinar dados e resolver problemas. Concordamos com a filosofia de "aprender fazendo" para uma melhor compreensão da análise de dados\footnote{Este capítulo foi fortemente baseado em \cite{brown2021statistics} de David Brown (ver Figura \ref{fig:mrbrown}) \emoji{backhand-index-pointing-down} .}.
 
 
 \begin{marginfigure}
@@ -477,16 +477,16 @@ De modo que, olhando para nossos resultados, podemos avaliar que há uma certa d
 	\textbf{Não Significância Estatística:} se o valor \textit{p} é maior que o nível de significância, não rejeitamos a hipótese nula, indicando que não há evidências suficientes para afirmar que a diferença observada é estatisticamente significativa.}. Acompanhar a tradução gráfica do resultado\footnote{\textbf{Explore Antes de Testar:} Familiarize-se com seu conjunto de dados antes de realizar testes de hipótese. \\
 	\textbf{Verifique as Assunções:} Cada teste estatístico tem suposições (como normalidade, independência ou variância igual). \\ 
 	\textbf{Escolha o Teste Correto:} diferentes testes são projetados para diferentes tipos de dados e objetivos. Por exemplo, use um teste t para comparar médias, testes qui-quadrado para dados categóricos e ANOVA para comparar mais de dois grupos.\\
-	\textbf{Considere Opções Não Paramétricas:} Se seus dados não atenderem às suposições dos testes paramétricos (são normais?).} na Figura \ref{fig:boxplottesthyp}.
+	\textbf{Considere Opções Não Paramétricas:} Se seus dados não atenderem às suposições dos testes paramétricos (são normais?).} na Figura \ref{fig:boxplottesthyp}. O código está na Listagem \ref{lst:result_box_plot}.
 
-\begin{lstlisting}[language={R}, caption={apresentação dos resultados.}, label={lst:result}]
+\begin{lstlisting}[language={R}, caption={apresenta os resultados em forma gráfica.}, label={lst:result_box_plot}]
 >library(ggplot2)
 >ggplot(PlantGrowth, aes(x = group, y = weight)) +
 geom_boxplot() +
 theme_minimal() +
-labs(title = "Plant Growth by Treatment Group",
-x = "Group",
-y = "Weight")
+labs(title = "Crescimento das Plantas por Grupo de  Tratamento",
+x = "Grupo",
+y = "Peso")
 \end{lstlisting}
 
 
@@ -502,7 +502,7 @@ y = "Weight")
 
 \section{Construção e Estimativa de Modelos}
 
-Um objetivo comum para o desenvolvimento de um modeloé prever qual será o valor de saída de um sistema para conjunto de valores de entrada. A ideia é discutir como desenvolver o modelo, como avaliar
+Um objetivo comum para o desenvolvimento de um modelo é prever qual será o valor de saída de um sistema para conjunto de valores de entrada. A ideia é discutir como desenvolver o modelo, como avaliar
 até que ponto o modelo criado se ajusta aos dados e como interpretar os resultados. 
 
 Suponha que medimos o desempenho de vários dispositivos computacionais. Podemos organizar  as $n \times k$ medições, mostradas na Tabela  \ref{tab:benchmark} Como medimos o desempenho de n dispositivos diferentes, obteremos $n$ linhas na tabela. Cada linha é chamada de ``observação" única.
@@ -703,14 +703,38 @@ O gráfico ``\textit{Scale-location}" é uma maneira alternativa de visualizar o
 
 O gráfico de Resíduos vs Alavancagem pode ser usado para identificar possíveis \textit{outliers}. Neste cenário, não há \textit{outliers}.  
 
-Já o gráfico apresentado na Figura \ref{fig:slrresidprecisoint200} serve de comparação com a situação estudada até aqui, já que ele mostra um cenário onde o modelo se ajusta bem ao comportamento da variável dependente.
+Já o gráfico apresentado na Figura 	\label{fig:duas_figuras} serve de comparação com a situação estudada até aqui, já que ele mostra um cenário onde o modelo se ajusta bem ao comportamento da variável dependente.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200}
-	\caption{Um modelo de regressão linear básico ajustado para uma precisão próxima de 90\%, para comparação com a Figura \ref{fig:slrresidint200}.}
-	\label{fig:slrresidprecisoint200}
+	\begin{subfigure}[b]{0.47\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/slr_resid_preciso_int_200}
+		\caption{Um modelo de regressão linear básico ajustado para uma precisão próxima de 90\%, para comparação com a Figura \ref{fig:slrresidint200}.}
+		\label{fig:figura_a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.47\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/slr_alavancagem_com_outlier_int_2000}
+		\caption{Um gráfico de alavancagem para evidenciar os \textit{outliers} em um cenário em que realmente há \textit{outliers}, para  comparação Figura \ref{fig:slr4graphsint2000}.}
+		\label{fig:figura_b}
+	\end{subfigure}
+	\caption{Dois gráficos que devem ser usados como comparação em cenários opostos as Figuras \ref{fig:slrresidint200} e \ref{fig:slr4graphsint2000}. }
+	\label{fig:duas_figuras}
 \end{figure}
+
+
+
+
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{figs/slr_resid_preciso_int_200}
+%	\caption{Um modelo de regressão linear básico ajustado para uma precisão próxima de 90\%, para comparação com a Figura \ref{fig:slrresidint200}.}
+%	\label{fig:slrresidprecisoint200}
+%\end{figure}
+
+
 
 \section{Multiple Linear Regression \cite{Lilja2016}}
 \newpage

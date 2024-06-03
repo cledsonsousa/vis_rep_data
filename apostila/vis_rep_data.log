@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2024.4.14)  2 JUN 2024 20:04
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2024.4.14)  2 JUN 2024 22:57
  restricted system commands enabled.
 **vis_rep_data.tex
 (./vis_rep_data.tex
@@ -1221,10 +1221,10 @@ Package: memhfixc 2023/09/10 v1.22 hyperref package fixes for memoir class
 Writing index file vis_rep_data.idx 
 (./vis_rep_data.aux
 
-LaTeX Warning: Label `lst:result' multiply defined.
-
-
 LaTeX Warning: Label `fig:slrint2000' multiply defined.
+
+
+LaTeX Warning: Label `fig:duas_figuras' multiply defined.
 
 )
 \openout1 = vis_rep_data.aux
@@ -1359,7 +1359,7 @@ Package hyperref Info: Link coloring OFF on input line 96.
 \@outlinefile=\write6
 
 \openout6 = vis_rep_data.out
-<figs/uffdataacademy.png, id=62, 359.3425pt x 248.93pt>
+<figs/uffdataacademy.png, id=66, 359.3425pt x 248.93pt>
 File: figs/uffdataacademy.png Graphic file (type png)
 <use figs/uffdataacademy.png>
 Package luatex.def Info: figs/uffdataacademy.png  used on input line 133.
@@ -1385,19 +1385,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 [2]
-<figs/layers_box_plt_example.png, id=108, 472.01344pt x 471.26062pt>
+<figs/layers_box_plt_example.png, id=115, 472.01344pt x 471.26062pt>
 File: figs/layers_box_plt_example.png Graphic file (type png)
 <use figs/layers_box_plt_example.png>
 Package luatex.def Info: figs/layers_box_plt_example.png  used on input line 21
 8.
 (luatex.def)             Requested size: 170.5pt x 170.22896pt.
  [3<./figs/layers_box_plt_example.png>]
-<figs/error_bar_example.png, id=122, 89.73524pt x 87.32625pt>
+<figs/error_bar_example.png, id=129, 89.73524pt x 87.32625pt>
 File: figs/error_bar_example.png Graphic file (type png)
 <use figs/error_bar_example.png>
 Package luatex.def Info: figs/error_bar_example.png  used on input line 244.
 (luatex.def)             Requested size: 107.4138pt x 104.5298pt.
-<figs/error_line_example.png, id=123, 89.133pt x 85.5195pt>
+<figs/error_line_example.png, id=130, 89.133pt x 85.5195pt>
 File: figs/error_line_example.png Graphic file (type png)
 <use figs/error_line_example.png>
 Package luatex.def Info: figs/error_line_example.png  used on input line 251.
@@ -1410,7 +1410,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4<./figs/error_bar_example.png><./figs/error_line_example.png>]
-<figs/IC_sobrep_visual.png, id=144, 472.01344pt x 471.26062pt>
+<figs/IC_sobrep_visual.png, id=151, 472.01344pt x 471.26062pt>
 File: figs/IC_sobrep_visual.png Graphic file (type png)
 <use figs/IC_sobrep_visual.png>
 Package luatex.def Info: figs/IC_sobrep_visual.png  used on input line 292.
@@ -1425,7 +1425,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [5]
-<../../vis_rep_data/apostila/figs/band _and_violin1.png, id=162, 714.9912pt x 2
+<../../vis_rep_data/apostila/figs/band _and_violin1.png, id=169, 714.9912pt x 2
 91.489pt>
 File: ../../vis_rep_data/apostila/figs/band _and_violin1.png Graphic file (type
  png)
@@ -1446,7 +1446,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [6<./figs/IC_sobrep_visual.png>]
-<figs/mr_brown.png, id=178, 770.88pt x 770.88pt>
+<figs/mr_brown.png, id=185, 770.88pt x 770.88pt>
 File: figs/mr_brown.png Graphic file (type png)
 <use figs/mr_brown.png>
 Package luatex.def Info: figs/mr_brown.png  used on input line 317.
@@ -1491,14 +1491,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [9]
-<../../vis_rep_data/apostila/figs/hyp_test.png, id=211, 1541.76pt x 740.7675pt>
+<../../vis_rep_data/apostila/figs/hyp_test.png, id=218, 1541.76pt x 740.7675pt>
 
 File: ../../vis_rep_data/apostila/figs/hyp_test.png Graphic file (type png)
 <use ../../vis_rep_data/apostila/figs/hyp_test.png>
 Package luatex.def Info: ../../vis_rep_data/apostila/figs/hyp_test.png  used on
  input line 384.
 (luatex.def)             Requested size: 341.0pt x 163.83969pt.
-<figs/r_logo.png, id=215, 726.715pt x 563.10374pt>
+<figs/r_logo.png, id=222, 726.715pt x 563.10374pt>
 File: figs/r_logo.png Graphic file (type png)
 <use figs/r_logo.png>
 Package luatex.def Info: figs/r_logo.png  used on input line 398.
@@ -1609,7 +1609,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 480--480
 
 LaTeX Warning: Marginpar on page 13 moved by 143.95334pt.
 
-<../../vis_rep_data/apostila/figs/box_plot_test_hyp.png, id=284, 502.87875pt x 
+<../../vis_rep_data/apostila/figs/box_plot_test_hyp.png, id=291, 502.87875pt x 
 471.26062pt>
 File: ../../vis_rep_data/apostila/figs/box_plot_test_hyp.png Graphic file (type
  png)
@@ -1622,7 +1622,7 @@ Underfull \hbox (badness 7595) in paragraph at lines 565--565
 [][][][]\TU/lmr/m/n/8 O \TU/lmr/m/it/8 In-te-ger Com-po-nent of
  []
 
-<figs/int_2000.png, id=321, 502.87875pt x 471.26062pt>
+<figs/int_2000.png, id=328, 502.87875pt x 471.26062pt>
 File: figs/int_2000.png Graphic file (type png)
 <use figs/int_2000.png>
 Package luatex.def Info: figs/int_2000.png  used on input line 569.
@@ -1637,7 +1637,7 @@ Underfull \hbox (badness 4328) in paragraph at lines 575--575
 \TU/lmr/m/n/8 (Dhrys-to-nes por se-gundo[[]])de
  []
 
-<../../vis_rep_data/apostila/figs/slr_int_2000.png, id=324, 502.87875pt x 471.2
+<../../vis_rep_data/apostila/figs/slr_int_2000.png, id=331, 502.87875pt x 471.2
 6062pt>
 File: ../../vis_rep_data/apostila/figs/slr_int_2000.png Graphic file (type png)
 
@@ -1665,7 +1665,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [17]
-<figs/slr_resid_int_200.png, id=374, 502.87875pt x 471.26062pt>
+<figs/slr_resid_int_200.png, id=381, 502.87875pt x 471.26062pt>
 File: figs/slr_resid_int_200.png Graphic file (type png)
 <use figs/slr_resid_int_200.png>
 Package luatex.def Info: figs/slr_resid_int_200.png  used on input line 670.
@@ -1694,7 +1694,7 @@ Underfull \hbox (badness 2573) in paragraph at lines 677--677
 \TU/lmr/m/n/8 mo-delo de re-gres-são com uma
  []
 
-<../../vis_rep_data/apostila/figs/slr_qq_plot_int_2000.png, id=383, 1156.32pt x
+<../../vis_rep_data/apostila/figs/slr_qq_plot_int_2000.png, id=390, 1156.32pt x
  555.57562pt>
 File: ../../vis_rep_data/apostila/figs/slr_qq_plot_int_2000.png Graphic file (t
 ype png)
@@ -1711,7 +1711,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.69003pt}.
 
 [19<./figs/slr_resid_int_200.png>]
-<../../vis_rep_data/apostila/figs/slr_4_graphs_int_2000.png, id=392, 1156.32pt 
+<../../vis_rep_data/apostila/figs/slr_4_graphs_int_2000.png, id=399, 1156.32pt 
 x 555.57562pt>
 File: ../../vis_rep_data/apostila/figs/slr_4_graphs_int_2000.png Graphic file (
 type png)
@@ -1730,21 +1730,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20<../../vis_rep_data/apostila/figs/slr_qq_plot_int_2000.png><../../vis_rep_dat
 a/apostila/figs/slr_4_graphs_int_2000.png>]
-<../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200.png, id=402, 472.01
-344pt x 471.26062pt>
-File: ../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200.png Graphic fi
-le (type png)
-<use ../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200.png>
-Package luatex.def Info: ../../vis_rep_data/apostila/figs/slr_resid_preciso_int
-_200.png  used on input line 710.
-(luatex.def)             Requested size: 238.69896pt x 238.3191pt.
+<figs/slr_resid_preciso_int_200.png, id=408, 1156.32pt x 555.57562pt>
+File: figs/slr_resid_preciso_int_200.png Graphic file (type png)
+<use figs/slr_resid_preciso_int_200.png>
+Package luatex.def Info: figs/slr_resid_preciso_int_200.png  used on input line
+ 712.
+(luatex.def)             Requested size: 160.27042pt x 77.00012pt.
+<figs/slr_alavancagem_com_outlier_int_2000.png, id=411, 1156.32pt x 555.57562pt
+>
+File: figs/slr_alavancagem_com_outlier_int_2000.png Graphic file (type png)
+<use figs/slr_alavancagem_com_outlier_int_2000.png>
+Package luatex.def Info: figs/slr_alavancagem_com_outlier_int_2000.png  used on
+ input line 719.
+(luatex.def)             Requested size: 160.27042pt x 77.00012pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 715.
+(hyperref)                removing `\@ifnextchar' on input line 739.
 
-[21<../../vis_rep_data/apostila/figs/slr_resid_preciso_int_200.png>] [22]
-(./vis_rep_data.bbl (./vis_rep_data.brf)
+[21<./figs/slr_resid_preciso_int_200.png><./figs/slr_alavancagem_com_outlier_int
+_2000.png>] [22] (./vis_rep_data.bbl (./vis_rep_data.brf)
 \tf@brf=\write7
 
 \openout7 = vis_rep_data.brf
@@ -1772,14 +1777,8 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `vis_rep_data.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `vis_rep_data.out':
-(rerunfilecheck)             Before: 6E261A356B663EBC1FF0D7DD77369C89;2826
-(rerunfilecheck)             After:  FAF7FB68065A1276DAEFE886A6E497C5;3070.
+Package rerunfilecheck Info: File `vis_rep_data.out' has not changed.
+(rerunfilecheck)             Checksum: FAF7FB68065A1276DAEFE886A6E497C5;3070.
 Package rerunfilecheck Info: File `vis_rep_data.brf' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
@@ -1789,47 +1788,48 @@ Package rerunfilecheck Info: File `vis_rep_data.brf' has not changed.
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 39712 strings out of 476497
+ 39734 strings out of 476497
  305291,1977958 words of node,token memory allocated
- 37691 words of node memory still in use:
-   216 hlist, 31 vlist, 7 rule, 418 disc, 16 local_par, 30 math, 680 glue, 186 k
+ 37698 words of node memory still in use:
+   216 hlist, 31 vlist, 7 rule, 418 disc, 16 local_par, 30 math, 681 glue, 186 k
 ern, 110 penalty, 3086 glyph, 497 attribute, 206 glue_spec, 250 attribute_list, 
 5 write, 2 pdf_literal, 7 pdf_start_link, 7 pdf_end_link, 12 pdf_dest, 7 pdf_act
 ion, 4 pdf_colorstack, 2 pdf_setmatrix, 2 pdf_save, 2 pdf_restore nodes
-   avail lists: 2:4651,3:271,4:4144,5:4040,6:87,7:9259,8:42,9:12124,10:31,11:893
+   avail lists: 2:4651,3:271,4:4144,5:4040,6:87,7:9264,8:42,9:12124,10:31,11:893
 
- 60758 multiletter control sequences out of 65536+600000
- 55 fonts using 53202655 bytes
+ 60777 multiletter control sequences out of 65536+600000
+ 56 fonts using 53334407 bytes
  87i,12n,89p,1032b,1290s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<//?/c:/program files/miktex/fonts/opentype/public/lm/lmroman10-bolditalic.otf><
-//?/c:/program files/miktex/fonts/opentype/public/lm/lmmono8-regular.otf><//?/c:
-/program files/miktex/fonts/opentype/public/lm/lmroman8-italic.otf><//?/c:/progr
-am files/miktex/fonts/opentype/public/lm/lmroman8-bold.otf><//?/c:/program files
-/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><//?/c:/program files/mikt
-ex/fonts/opentype/public/lm/lmroman6-regular.otf><//?/c:/program files/miktex/fo
-nts/opentype/public/lm/lmroman7-regular.otf><//?/c:/program files/miktex/fonts/o
-pentype/public/lm/lmroman9-regular.otf><//?/c:/program files/miktex/fonts/openty
-pe/public/lm/lmroman10-italic.otf><//?/c:/program files/miktex/fonts/opentype/pu
-blic/lm/lmmono10-regular.otf><C:/windows/Fonts/seguiemj.ttf><//?/c:/program file
-s/miktex/fonts/opentype/public/lm/lmromancaps10-regular.otf><//?/c:/program file
-s/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/program files/mi
-ktex/fonts/opentype/public/lm/lmroman10-bold.otf><//?/c:/program files/miktex/fo
-nts/opentype/public/lm/lmroman12-regular.otf><//?/c:/program files/miktex/fonts/
-opentype/public/lm/lmroman12-bold.otf><//?/c:/program files/miktex/fonts/opentyp
-e/public/lm/lmroman17-regular.otf><C:/Program Files/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb>
-Output written on vis_rep_data.pdf (25 pages, 2233893 bytes).
+<//?/c:/program files/miktex/fonts/opentype/public/lm/lmroman9-italic.otf><//?/c
+:/program files/miktex/fonts/opentype/public/lm/lmroman10-bolditalic.otf><//?/c:
+/program files/miktex/fonts/opentype/public/lm/lmmono8-regular.otf><//?/c:/progr
+am files/miktex/fonts/opentype/public/lm/lmroman8-italic.otf><//?/c:/program fil
+es/miktex/fonts/opentype/public/lm/lmroman8-bold.otf><//?/c:/program files/mikte
+x/fonts/opentype/public/lm/lmroman8-regular.otf><//?/c:/program files/miktex/fon
+ts/opentype/public/lm/lmroman6-regular.otf><//?/c:/program files/miktex/fonts/op
+entype/public/lm/lmroman7-regular.otf><//?/c:/program files/miktex/fonts/opentyp
+e/public/lm/lmroman9-regular.otf><//?/c:/program files/miktex/fonts/opentype/pub
+lic/lm/lmroman10-italic.otf><//?/c:/program files/miktex/fonts/opentype/public/l
+m/lmmono10-regular.otf><C:/windows/Fonts/seguiemj.ttf><//?/c:/program files/mikt
+ex/fonts/opentype/public/lm/lmromancaps10-regular.otf><//?/c:/program files/mikt
+ex/fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/program files/miktex/f
+onts/opentype/public/lm/lmroman10-bold.otf><//?/c:/program files/miktex/fonts/op
+entype/public/lm/lmroman12-regular.otf><//?/c:/program files/miktex/fonts/openty
+pe/public/lm/lmroman12-bold.otf><//?/c:/program files/miktex/fonts/opentype/publ
+ic/lm/lmroman17-regular.otf><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb>
+Output written on vis_rep_data.pdf (25 pages, 2260447 bytes).
 
-PDF statistics: 572 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 591 PDF objects out of 1000 (max. 8388607)
  159 named destinations out of 1000 (max. 131072)
- 128 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 100000000)
 
