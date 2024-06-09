@@ -11,7 +11,6 @@ data <- data.frame(
 # Criar o gráfico de box plots
 ggplot(data, aes(x = grupo, y = valor, fill = grupo)) +
   geom_boxplot() +
-  theme_minimal() +
   labs(title = "Box Plots por Grupo", x = "Grupo", y = "Valor") +
   theme(
     plot.title = element_text(size = 24, face = "bold", hjust = 0.5),
