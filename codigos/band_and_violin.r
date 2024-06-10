@@ -37,7 +37,7 @@ df <- data.frame(
   feed = factor(rep(c("Tipo A", "Tipo B"), each = 100))
 )
 
-`
+
 # install.packages("vioplot")
 )
 # Carregar a biblioteca necessária
