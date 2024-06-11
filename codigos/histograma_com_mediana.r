@@ -1,7 +1,7 @@
 library(ggplot2)
 library(gridExtra)  # Carrega o pacote para organizar os gráficos lado a lado
 
-# Suponha que 'world' seja seu dataframe e 'homicide' o campo com dados
+
 # Calcular a média de homicídios
 media_homicide <- mean(world$homicide, na.rm = TRUE)
 

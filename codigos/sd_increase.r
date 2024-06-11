@@ -17,8 +17,6 @@ data_long <- gather(h, condition, measurement, p1:p3, factor_key = TRUE)
 data_long$condition <- factor(data_long$condition, levels = c("p1", "p2", "p3"), labels = c("Std=1", "Std=2", "Std=3"))
 
 library(ggplot2)
-
-# Suponho que 'data_long' seja o seu dataframe já preparado anteriormente
 ggplot(data_long, aes(x = measurement)) + 
   geom_histogram(fill = "#0000ff", bins = 30) +  # Definir número de bins para controlar a granularidade do histograma
   facet_grid(. ~ condition) +  # Organizar os gráficos lado a lado com base na condição

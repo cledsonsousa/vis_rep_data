@@ -4,7 +4,7 @@ install.packages("ggplot2")
 # Carregar o pacote
 library(ggplot2)
 
-# Supondo que delta é um vetor
+
 delta <- predicted.dat - test.dat$nperf
 
 # Criar um data frame com delta
