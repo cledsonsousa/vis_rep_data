@@ -43,7 +43,7 @@ ggplot(dados, aes(x = x, y = y, color = Distribuicao)) +
   annotate("text", x = -0.7, y = 0.01, label = "Erro Tipo I", color = "black", hjust = 0, size = 4) +
   annotate("text", x = 2.5, y = 0.02, label = "β", color = "black", hjust = 0, size = 4) +
   annotate("text", x = 0.5, y = 0.02, label = "α", color = "black", hjust = 0, size = 4) +
-  
+   
   labs(title = "Curvas de Distribuição e Erros Tipo I e Tipo II",
        x = "Valores",
        y = "Densidade") +
